@@ -35,17 +35,17 @@
     <main class="contenido-principal contenedor">
             <h2 class="text-center">Contacto</h2>
 
-            <form action="">
+            <form class="formulario">
                 <fieldset>
                     <legend>Tus Datos</legend>
                         <div class="campo">
                             <label for="nombre">Nombre:</label>
-                            <input id="nombre" type="text" placeholder="Tu nombre">
+                            <input id="nombre" type="text" placeholder="Tu nombre" required>
                         </div>
                         
                         <div class="campo">
                             <label for="asunto">Asunto:</label>
-                            <input id="asunto" type="text" placeholder="Tu Asunto">
+                            <input id="asunto" type="text" placeholder="Tu Asunto" required>
                         </div>   
 
                         <div class="campo">
@@ -56,17 +56,52 @@
                         <div class="campo">
                             <label for="tel">Teléfono:</label>
                             <input id="tel" type="tel" placeholder="Tu Teléfono">
-                        </div>    
-  
-                    </fieldset>
-                    <legend>País</legend>
-                <fieldset>
-                    
-                </fieldset>
-                    <legend>Información Extra</legend>
-                <fieldset>
+                        </div>   
 
+                        <div class="campo">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" rows="10" cols="20"></textarea>                            
+                        </div>   
                 </fieldset>
+
+                <fieldset>
+                    <legend>País</legend>
+                        <div class="campo">
+                            <label for="pais">País</label>
+                            <select id="pais">
+                                <option value="#">-- Seleccione --</option>
+                                <option value="ES">España</option>
+                                <option value="FR">Francia</option>
+                                <option value="IT">Italia</option>
+                                <option value="AL">Alemania</option>
+                            </select>
+                        </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información Extra</legend>
+                        <div class="campo">
+                            <label for="cliente">Cliente</label>
+                            <input id="cliente" type="radio" name="tipo" value="cliente">        
+                        </div>
+                        <div class="campo">
+                            <label for="proveedor">Proveedor</label>
+                            <input id="proveedor" type="radio" name="tipo" value="proveedor">        
+                        </div>
+                        <div class="campo">
+                            <label for="categoria">Categoría de Interés</label>                    
+                            <input list="categorias" name="categorias">
+                            <datalist id="categorias">
+                                <option value="Cocina"></option>
+                                <option value="Exterior"></option>
+                                <option value="Baño"></option>
+                                <option value="Oficina"></option>
+                                <option value="Salón"></option>
+                                <option value="Dormitorio"></option>
+                            </datalist>
+                        </div>
+                </fieldset>
+                <input class="btn" type="submit" value="Enviar Formulario">
             </form>
      
     </main>
